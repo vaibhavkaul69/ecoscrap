@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Roboto:wght@300;400&display=swap"
+			rel="stylesheet"
+		/>
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ecoscrap</title>
+		<link rel="icon" href="./images/favicon.jpg" />
+		<link rel="stylesheet" href="./css/main-stylesheet.css" />
+	</head>
+	<body>
+		<main id="ecoscrap-main-body-content">
+			<header id="topNabar" class="navbar top-fixed-nav">
+				<nav class="navbar-content-top-navbar">
+					<a href="index.html">
+						<img
+							class="ecoscrap-logo-image navbar-logo"
+							alt="Ecoscrap Logo"
+							src="./images/logo-transparent.png"
+						/>
+					</a>
+					<div class="top-navbar-right-container">
+						<a href="#" class="nav-link top-nav-link"> Our Mission </a>
+						<a href="#" class="nav-link top-nav-link">Articles</a>
+						<button class="nav-link top-nav-link" id="youtubeLinksBtn"
+							>Links</button
+						>
+						<button class="nav-link top-nav-link" id="contactUsBtn"
+							>Contact Us</button
+						>
+					</div>
+					<button id="toggleSideNavBtn" onclick="openCloseSideNavbar();"
+						>&#9776;</button
+					>
+				</nav>
+			</header>
+			<header
+				id="sideNavbar"
+				class="inactive-close-sidebar navbar side-fix-nav"
+			>
+				<nav class="navbar-content-side-navbar">
+					<a href="index.html">
+						<img
+							class="ecoscrap-logo-image navbar-logo"
+							alt="Ecoscrap Logo"
+							src="./images/logo-transparent.png"
+						/>
+					</a>
+					<div class="side-navbar-right-container">
+						<a href="#" class="nav-link side-nav-link"> Our Mission </a>
+						<a href="#" class="nav-link side-nav-link">Articles</a>
+						<button class="nav-link side-nav-link" id="youtubeLinksBtn"
+							>Links</button
+						>
+						<button class="nav-link side-nav-link" id="contactUsBtn"
+							>Contact Us</button
+						>
+					</div>
+					<button id="closeSideNavBtn" onclick="openCloseSideNavbar();"
+						>x</button
+					>
+				</nav>
+			</header>
+		</main>
+	</body>
+	<script src="./scripts/main-script.js"></script>
+</html>

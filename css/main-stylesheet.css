@@ -1,0 +1,153 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+button:focus,
+input:focus,
+textarea:focus {
+	outline: none;
+}
+:root {
+	--theme-blue: #2d6480;
+	--theme-green: #81c483;
+}
+.active-open-sidebar {
+	transform: translate(0%);
+	opacity: 1;
+}
+.inactive-close-sidebar {
+	transform: translate(-100%);
+	opacity: 0;
+}
+/*top nabar css starts here*/
+.navbar {
+	background-color: #fff;
+	box-shadow: 5px 5px 25px 0 rgba(46, 61, 73, 0.2);
+}
+.top-fixed-nav {
+	width: 100%;
+	height: 60px;
+	position: fixed;
+	top: 0px;
+	z-index: 999;
+}
+.navbar-content-top-navbar {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	height: 100%;
+}
+.navbar-logo {
+	height: 50px;
+	margin: 5px 10px;
+}
+#toggleSideNavBtn {
+	color: var(--theme-blue);
+	font-size: 2rem;
+	background-color: #fff;
+	border: none;
+	cursor: pointer;
+	margin: 0px 10px;
+	display: none;
+}
+.top-navbar-right-container {
+	width: 100%;
+	display: flex;
+	height: 100%;
+	justify-content: flex-end;
+	align-items: center;
+	margin: 0px 20px;
+}
+.top-nav-link {
+	height: 100%;
+	display: flex;
+	margin: 0px 20px;
+	align-items: center;
+}
+.nav-link {
+	font: 400 16px "Open Sans", sans-serif;
+	transition: all 0.1s ease-in-out;
+	color: var(--theme-blue);
+	cursor: pointer;
+	text-decoration: none;
+	background-color: transparent;
+	border: none;
+}
+.top-nav-link:nth-child(4) {
+	margin-left: 100px;
+	margin-right: 50px;
+	height: auto;
+}
+#contactUsBtn {
+	color: #fff;
+	padding: 5px 10px;
+	background: var(--theme-green);
+}
+.nav-link:hover {
+	border-bottom: 5px solid var(--theme-green);
+	color: var(--theme-green);
+}
+/*top navbar css ends here*/
+
+/*side navbar css starts here*/
+.side-fix-nav {
+	position: fixed;
+	left: 0px;
+	height: 100vh;
+	z-index: 9999;
+	width: 200px;
+	transition: all 0.3s ease-in-out;
+}
+.navbar-content-side-navbar {
+	height: 100%;
+	position: relative;
+	width: 100%;
+}
+.side-navbar-right-container {
+	height: 100%;
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	align-items: flex-start;
+}
+.side-nav-link {
+	text-align: left;
+	width: 90%;
+	border-bottom: 1px solid #eee;
+	padding: 10px 10px;
+	margin: 15px 10px;
+}
+#closeSideNavBtn {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	height: 30px;
+	width: 30px;
+	font-size: 1.5rem;
+	background-color: #eee;
+	border: none;
+	color: red;
+}
+/*side navbar css ends here*/
+
+/* All Media queries here*/
+@media all and (max-width: 1100px) {
+	.nav-link {
+		font-size: 15px;
+	}
+	.top-nav-link:nth-child(4) {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+}
+
+@media all and (max-width: 900px) {
+	.top-navbar-right-container {
+		display: none;
+	}
+	#toggleSideNavBtn {
+		display: flex;
+		align-items: center;
+	}
+}
