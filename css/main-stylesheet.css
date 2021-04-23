@@ -2,16 +2,71 @@
 	margin: 0px;
 	padding: 0px;
 	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 button:focus,
 input:focus,
 textarea:focus {
 	outline: none;
 }
+body {
+	overflow-x: hidden;
+}
 :root {
 	--theme-blue: #2d6480;
 	--theme-green: #81c483;
+	--theme-boxShadow: 5px 5px 25px 0 rgba(46, 61, 73, 0.2);
 }
+.swiper-container {
+	width: 100%;
+	height: 100%;
+}
+
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+	height: 300px;
+	width: 100%;
+	margin: 0px 10px;
+	border: 1px solid #000;
+	/* Center slide text vertically */
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+.swiper-btn {
+	height: 100%;
+	background-color: #fff;
+	top: 20px;
+	outline: none;
+	box-shadow: var(--theme-boxShadow);
+	display: flex;
+	color: var(--theme-green) !important;
+	justify-content: center;
+	align-items: center;
+}
+.swiper-button-next {
+	right: 0px;
+}
+.swiper-button-prev {
+	left: 0px;
+}
+.width-80-90 {
+	width: 80%;
+	margin: 20px auto;
+	position: relative;
+}
+
 .active-open-sidebar {
 	transform: translate(0%);
 	opacity: 1;
@@ -23,7 +78,7 @@ textarea:focus {
 /*top nabar css starts here*/
 .navbar {
 	background-color: #fff;
-	box-shadow: 5px 5px 25px 0 rgba(46, 61, 73, 0.2);
+	box-shadow: var(--theme-boxShadow);
 }
 .top-fixed-nav {
 	width: 100%;
@@ -96,7 +151,7 @@ textarea:focus {
 	left: 0px;
 	height: 100vh;
 	z-index: 9999;
-	width: 200px;
+	width: 300px;
 	transition: all 0.3s ease-in-out;
 }
 .navbar-content-side-navbar {
@@ -121,17 +176,256 @@ textarea:focus {
 #closeSideNavBtn {
 	position: absolute;
 	right: 10px;
+	font-weight: 100;
 	top: 10px;
 	height: 30px;
+	cursor: pointer;
 	width: 30px;
 	font-size: 1.5rem;
-	background-color: #eee;
+	background-color: rgba(238, 238, 238, 0.808);
 	border: none;
-	color: red;
+	color: rgb(117, 112, 112);
 }
 /*side navbar css ends here*/
 
+/* Hero section and about us css starts*/
+.top-hero-section {
+	padding-top: 50px;
+	height: 100vh;
+	width: 100%;
+	padding-bottom: 30px;
+}
+.hero-section-banner {
+	min-height: 100vh;
+	background: linear-gradient(
+			to right bottom,
+			rgba(0, 0, 0, 0.1),
+			rgba(0, 0, 0, 0.5)
+		),
+		url("../images/scrap_bg.png") center no-repeat;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	padding: 10px 50px;
+	align-items: center;
+}
+.hero-section-logo {
+	height: 300px;
+}
+.hero-section-about-us {
+	padding: 0px 50px;
+	color: #fff;
+	width: 60%;
+}
+.hero-section-heading {
+	font: 600 6rem "Open Sans", sans-serif;
+}
+.about-us {
+	font: 400 1.7rem "Open Sans", sans-serif;
+	line-height: 45px;
+}
+.about-us > strong {
+	padding: 2px 5px;
+	background: var(--theme-green);
+}
+.about-us-points {
+	margin-top: 15px;
+	font: 400 22px "Open Sans", sans-serif;
+	line-height: 35px;
+	list-style-type: square;
+	position: relative;
+	width: 80%;
+	left: 30px;
+}
+/* Hero section and about us ends*/
+
+/*Buyer seller card css starts here*/
+.buyer-seller-cards {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.buyer-card,
+.seller-card {
+	background: #fff;
+	box-shadow: var(--theme-boxShadow);
+	margin: 0px 30px;
+	width: 160px;
+	transition: all 0.1s ease-in-out;
+	height: 200px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	text-decoration: none;
+	padding: 20px 10px;
+	border-radius: 5px;
+}
+.buyer-card:hover {
+	border: 5px solid var(--theme-green);
+	background-color: #81c48342;
+}
+.seller-card:hover {
+	border: 5px solid var(--theme-blue);
+	background: #2d648042;
+}
+.buyer-seller-icon {
+	height: 60px;
+}
+.buyer-seller-heading {
+	font: 600 20px "Open Sans", sans-serif;
+	margin: 10px 0px;
+}
+.buyer-heading {
+	color: var(--theme-green);
+}
+.seller-heading {
+	color: var(--theme-blue);
+}
+.buyer-seller-cta-text {
+	text-align: center;
+	color: #000;
+	font: 400 17px "Roboto", sans-serif;
+}
+/*Buyer seller css ends here */
+
+/*Ecoscrap mission css starts here*/
+
+.ecoscrap-mission {
+	margin-top: 40px;
+}
+.body-main-heading {
+	font: 600 4rem "Open Sans", sans-serif;
+	margin: 0px;
+}
+.line-under-heading {
+	height: 6px;
+	width: 100px;
+	margin-left: 10px;
+	margin-bottom: 30px;
+	margin-top: 5px;
+	display: block;
+	background: var(--theme-green);
+}
+.ecoscrap-mission-description {
+	font: 400 1.3rem "Roboto", sans-serif;
+	line-height: 30px;
+}
+.ecoscrap-mission-description > strong {
+	background: var(--theme-green);
+	letter-spacing: 1px;
+	color: #fff;
+	padding: 5px 10px;
+}
+/*Ecoscrap mission css ends here*/
+
+/*top-seller and top-scrap swiper container css starts here*/
+.top-seller-swiper-container,
+.top-scrap-swiper-container {
+	margin-top: 50px;
+}
+/*top seller and top-scrap swiper container css ends here*/
+
+/* Contact form footer css starts here*/
+
+#contactFormFooter {
+	margin-top: 50px;
+	height: 600px;
+}
+.contact-form-container {
+	min-height: 100%;
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: url("../images/more-detail-bg.png") center no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.contact-form-heading {
+	font: 600 3rem "Open Sans", sans-serif;
+	color: #fff;
+	margin: 15px 0px;
+}
+.contact-form-description {
+	font: 400 1.5rem "Roboto", sans-serif;
+	letter-spacing: 1px;
+	color: #fff;
+	width: 80%;
+}
+.contact-form {
+	min-height: 100%;
+	background: #fff;
+	padding: 20px;
+	box-shadow: var(--theme-boxShadow);
+}
+.contact-form-label {
+	font: 400 20px "Open Sans", sans-serif;
+	margin: 5px 0px;
+}
+.contact-form-input {
+	height: 40px;
+	font: 400 15px "Roboto", sans-serif;
+	padding: 0px 5px;
+	margin-bottom: 20px;
+	width: 100%;
+}
+#submitContactFromBtn {
+	font: 400 16px "Open Sans", sans-serif;
+	width: 100%;
+	background: var(--theme-green);
+	color: #fff;
+	cursor: pointer;
+	height: 40px;
+	border: none;
+}
+/*Contact form css ends here*/
+
+/*footer css starts here*/
+.footer {
+	width: 100%;
+	min-height: 40px;
+	margin-top: 100px;
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #eeeeee;
+}
+.copyright-footer-text {
+	font: 400 16px "Open Sans", sans-serif;
+	text-align: center;
+}
+.footer-social-media-icons {
+	display: flex;
+}
+.footer-social-media-icons > a {
+	margin: 0px 10px;
+}
+/*foote css ends here*/
+
 /* All Media queries here*/
+@media all and (max-width: 1250px) {
+	.hero-section-about-us {
+		width: 100%;
+	}
+	.hero-section-logo {
+		height: 230px;
+	}
+	.hero-section-heading {
+		font-size: 4rem;
+	}
+	.about-us {
+		font-size: 1.5rem;
+	}
+
+	.about-us-points {
+		width: 100%;
+		font-size: 20px;
+	}
+}
 @media all and (max-width: 1100px) {
 	.nav-link {
 		font-size: 15px;
@@ -149,5 +443,85 @@ textarea:focus {
 	#toggleSideNavBtn {
 		display: flex;
 		align-items: center;
+	}
+	.hero-section-logo {
+		display: none;
+	}
+	.hero-section-banner {
+		padding: 0px 20px;
+	}
+	.hero-section-about-us {
+		padding: 0px;
+	}
+	.contact-form-container {
+		flex-direction: column;
+	}
+	.contact-form-heading,
+	.contact-form-description {
+		text-align: center;
+		width: 100%;
+	}
+	.contact-form {
+		margin-top: 20px;
+		width: 100%;
+	}
+}
+
+@media all and (max-width: 550px) {
+	.width-80-90 {
+		width: 90%;
+	}
+	.side-fix-nav {
+		width: 80%;
+	}
+	.hero-section-heading {
+		margin-top: 60px;
+	}
+	.about-us {
+		font-size: 1.2rem;
+		line-height: 35px;
+	}
+	.about-us-points {
+		font-size: 18px;
+		left: 10px;
+		line-height: 30px;
+	}
+	.about-us-points > li {
+		margin: 10px 0px;
+	}
+	.body-main-heading {
+		font-size: 3rem;
+	}
+	.ecoscrap-mission-description {
+		font-size: 1.1rem;
+		line-height: 30px;
+	}
+	.footer {
+		flex-direction: column;
+	}
+	.copyright-footer-text {
+		margin-bottom: 15px;
+	}
+}
+
+@media all and (max-width: 400px) {
+	.hero-section-heading {
+		font-size: 3rem;
+	}
+	.about-us {
+		font-size: 18px;
+		line-height: 30px;
+	}
+	.about-us-points {
+		font-size: 16px;
+		left: 5px;
+		line-height: 25px;
+	}
+	.buyer-seller-cards {
+		margin-top: 100px;
+	}
+	.buyer-card,
+	.seller-card {
+		margin: 0 10px;
 	}
 }

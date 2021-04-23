@@ -7,6 +7,7 @@
 			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Roboto:wght@300;400&display=swap"
 			rel="stylesheet"
 		/>
+		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 		<meta name="description" content="" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Ecoscrap</title>
@@ -25,8 +26,8 @@
 						/>
 					</a>
 					<div class="top-navbar-right-container">
-						<a href="#" class="nav-link top-nav-link"> Our Mission </a>
-						<a href="#" class="nav-link top-nav-link">Articles</a>
+						<a href="#ecoscrapMission" class="nav-link top-nav-link"> Our Mission </a>
+						<a href="./html/articles.html" class="nav-link top-nav-link">Articles</a>
 						<button class="nav-link top-nav-link" id="youtubeLinksBtn"
 							>Links</button
 						>
@@ -52,8 +53,8 @@
 						/>
 					</a>
 					<div class="side-navbar-right-container">
-						<a href="#" class="nav-link side-nav-link"> Our Mission </a>
-						<a href="#" class="nav-link side-nav-link">Articles</a>
+						<a href="#ecoscrapMission" class="nav-link side-nav-link"> Our Mission </a>
+						<a href="./html/articles.html" class="nav-link side-nav-link">Articles</a>
 						<button class="nav-link side-nav-link" id="youtubeLinksBtn"
 							>Links</button
 						>
@@ -66,7 +67,119 @@
 					>
 				</nav>
 			</header>
+			<section class="top-hero-section">
+				<article class="hero-section-banner">
+					<div class="hero-section-big-logo">
+						<img src="./images/logo-transparent.png" class="hero-section-logo" alt="Ecoscrap Logo" />
+					</div>
+					<div class="hero-section-about-us">
+						<h1 class="hero-section-heading">Eco Scrap</h1>
+						<p class="about-us"
+							>ECOSCRAP is founded by <strong>Sachin Aggarwal</strong> B.E in Chemical
+							Engineering and <strong>Chirag Aggarwal</strong> B.E in Computer Science. ECOSCRAP
+							is the trusted community platform which provides buyers and
+							sellers of scrap.
+							<ul class="about-us-points">
+								<li>ECOSCRAP connects the people to trusted sellers and buyers of scrap.</li>
+								<li>ECOSCRAP Carryout research on the useless scrap to convert it into useful products.</li>
+								<li>ECOSCRAP provides the opportunity to the Young Entrepreneurs to setup their New Business from the Scrap.</li>
+							</ul>
+							</p>
+					</div>
+				</article>
+			</section>
+			<section class="buyer-seller-cards">
+				<a class="buyer-card" href="./html/buyer.html">
+					<img src="./images/buyer_icon.png" alt="Buyer Icon" class="buyer-seller-icon"/>
+					<h2 class="buyer-seller-heading buyer-heading">Buyer</h2>
+					<p class="buyer-seller-cta-text">
+						If you are a buyer click here
+					</p>
+				</a>
+				<a  class="seller-card" href="./html/seller.html">
+					<img src="./images/seller_icon.png" alt="Seller Icon" class="buyer-seller-icon"/>	
+					<h2 class="buyer-seller-heading seller-heading">Seller</h2>	
+					<p class="buyer-seller-cta-text">
+						If you are a seller click here
+					</p>		
+				</a>
+			</section>
+			<div id="ecoscrapMission"></div>
+			<section  class="ecoscrap-mission width-80-90">
+				<h2 class="body-main-heading">Our Mission</h2>
+				<span class="line-under-heading"></span>
+				<p class="ecoscrap-mission-description">
+					There are a lot of industries in the World. Every industry output gives scrap. 
+					There are two kind of scrap according to the perception of ECOSCRAP. 
+					One is useful scrap such as metal scrap which are already <strong>recycling and utilizing</strong> 
+					to get finished product and second is useless scrap which is neither recycling nor utilizing 
+					to get finished product so industries have to dump this kind of scrap and spending money in dumping.
+					<br/><br/>
+					<strong>ECOSCRAP Mission</strong> is to carry out research on useless scrap and let the world know how to 
+					recycle and utilize useless scrap in order to get finished product according to rules and 
+					regulations of manufacturing laws in order to keep environment safe. When ECOSCRAP will success in 
+					its Mission then world knows that how to utilize useless scrap and people will 
+					make money and they have new businesses to do.
+				</p>
+			</section>
+			<section class="width-80-90 top-seller-swiper-container">
+				<h2 class="body-main-heading">Our top sellers</h2>
+				<span class="line-under-heading"></span>
+				  <div class="swiper-container">
+					<div class="swiper-wrapper">
+					<div class="swiper-slide">Slide 1</div>
+					<div class="swiper-slide">Slide 2</div>
+					<div class="swiper-slide">Slide 3</div>
+					<div class="swiper-slide">Slide 4</div>
+					<div class="swiper-slide">Slide 5</div>	
+					</div>
+					<!-- Add Arrows -->
+					<div class="swiper-button-next swiper-btn"></div>
+					<div class="swiper-button-prev swiper-btn"></div>
+				</div>
+			</section>
+			<section class="width-80-90 top-scrap-swiper-container">
+				<h2 class="body-main-heading">Our top scrap</h2>
+				<span class="line-under-heading"></span>
+				  <div class="swiper-container">
+					<div class="swiper-wrapper">
+					<div class="swiper-slide">Slide 1</div>
+					<div class="swiper-slide">Slide 2</div>
+					<div class="swiper-slide">Slide 3</div>
+					<div class="swiper-slide">Slide 4</div>
+					<div class="swiper-slide">Slide 5</div>
+					</div>
+					<!-- Add Arrows -->
+					<div class="swiper-button-next swiper-btn"></div>
+					<div class="swiper-button-prev swiper-btn"></div>
+				</div>
+			</section>
+			<section id="contactFormFooter" class="width-80-90">
+				<div class="contact-form-container">
+					<article class="contact-form-info-left">
+						<h2 class="contact-form-heading">For more details</h2>
+						<p class="contact-form-description">
+							Enter your information and someone from our team will contact you.
+						</p>
+					</article>
+					<form class="contact-form" onsubmit="return false;">
+						<p class="contact-form-label">Email</p>
+						<input class="contact-form-input" type="email" placeholder="Enter your email" id="userEmail"/>
+						<p class="contact-form-label">Phone</p>
+						<input class="contact-form-input" type="number" placeholder="Enter your email" id="userEmail"/>
+						<input type="submit" id="submitContactFromBtn" value="Submit"/>
+					</form>
+				</div>
+			</section>
+			<footer class="footer">
+				<h4 class="copyright-footer-text">Copyright ©  2010-2021 EcoScrap. All rights reserved.</h4>
+				<div class="footer-social-media-icons">
+					<a href="#">Facebook Logo</a>
+					<a href="#">Instagram Logo</a>
+				</div>
+			</footer>
 		</main>
 	</body>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	<script src="./scripts/main-script.js"></script>
 </html>
